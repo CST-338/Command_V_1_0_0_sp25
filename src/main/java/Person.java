@@ -7,6 +7,27 @@
 public abstract class Person {
 
   private double power = 100.00;
+  private String name;
+  private String location;
+
+  public abstract boolean addStone(IStone stone);
+  public abstract boolean removeStone(IStone stone);
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getLocation() {
+    return location;
+  }
+
+  public void setLocation(String location) {
+    this.location = location;
+  }
 
   public double getPower() {
     return power;
