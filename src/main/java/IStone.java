@@ -5,5 +5,6 @@
  * @since 0.1.0
  */
 public interface IStone {
+  void activate();
 
 }
