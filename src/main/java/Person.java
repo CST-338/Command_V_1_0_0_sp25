@@ -6,4 +6,13 @@
  */
 public abstract class Person {
 
+  private double power = 100.00;
+
+  public double getPower() {
+    return power;
+  }
+
+  public void setPower(double power) {
+    this.power = power;
+  }
 }
