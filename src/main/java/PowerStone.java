@@ -15,7 +15,16 @@ public class PowerStone implements IStone{
   //This is used to allow undo operations.
   private int activationCount = 0;
 
-  public PowerStone(Person owner) {
+  private static PowerStone powerStone;
+
+  public static PowerStone getPowerStone(Person owner){
+    if(powerStone == null){
+      powerStone = new PowerStone(owner);
+    }
+    return powerStone;
+  }
+
+  private PowerStone(Person owner) {
     this.owner = owner;
   }
 
