@@ -9,5 +9,7 @@ public interface IStone {
 
   void activate();
 
+  String toString();
+
 
 }

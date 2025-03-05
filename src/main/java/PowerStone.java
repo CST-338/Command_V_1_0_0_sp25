@@ -17,6 +17,13 @@ public class PowerStone implements IStone{
 
   private static PowerStone powerStone;
 
+  @Override
+  public String toString() {
+    return "PowerStone is owned by " + owner +
+        ". It's been used =" + activationCount +
+        "times";
+  }
+
   public static PowerStone getPowerStone(Person owner){
     if(powerStone == null){
       powerStone = new PowerStone(owner);
