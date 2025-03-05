@@ -3,8 +3,7 @@ public class MCU {
   /**
    */
   public static void main(String[] args) {
-    Titan thanos = new Titan("Thanos");
-
+    Titan thanos = new Titan("Thanos", "Earth");
     PowerStone powerStone = PowerStone.getPowerStone(thanos);
 
     thanos.addStone(powerStone);

@@ -11,8 +11,9 @@ public class Titan extends Person{
 
   private final List<IStone> gauntlet;
 
-  public Titan(String name) {
+  public Titan(String name, String location) {
     this.setName(name);
+    this.setLocation(location);
     gauntlet = new ArrayList<>();
   }
 

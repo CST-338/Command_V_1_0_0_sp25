@@ -27,6 +27,11 @@ public class PowerStone implements IStone{
     return powerStone;
   }
 
+  @Override
+  public String toString() {
+    return "PowerStone" + (owner != null ? " is owned by " + owner.getName() : "");
+  }
+
   private PowerStone(Person owner) {
     this.owner = owner;
   }

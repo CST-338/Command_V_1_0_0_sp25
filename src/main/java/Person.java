@@ -13,6 +13,11 @@ public abstract class Person {
   public abstract boolean addStone(IStone stone);
   public abstract boolean removeStone(IStone stone);
 
+  @Override
+  public String toString() {
+    return name + " has power: " + power + " and  is at " + location;
+  }
+
   public String getName() {
     return name;
   }
