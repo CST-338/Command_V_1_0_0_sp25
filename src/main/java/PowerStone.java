@@ -9,10 +9,25 @@
 public class PowerStone implements IStone{
 
   private final double powerMultiplier = 1.5;
+
   private int powerUpCount = 0;
   Person owner;
 
-  public PowerStone(Person owner) {
+  private static PowerStone powerStone;
+
+  /**
+   * A singleton pattern to get an instance of a PowerStone
+   * @param owner the owner of the stone
+   * @return a PowerStone instance.
+   */
+  public static PowerStone getPowerStone(Person owner){
+    if(PowerStone.powerStone == null){
+      powerStone = new PowerStone(owner);
+    }
+    return powerStone;
+  }
+
+  private PowerStone(Person owner) {
     this.owner = owner;
   }
 

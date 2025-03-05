@@ -5,7 +5,7 @@ public class MCU {
   public static void main(String[] args) {
     Titan thanos = new Titan("Thanos");
 
-    PowerStone powerStone = new PowerStone(thanos);
+    PowerStone powerStone = PowerStone.getPowerStone(thanos);
 
     thanos.addStone(powerStone);
 
