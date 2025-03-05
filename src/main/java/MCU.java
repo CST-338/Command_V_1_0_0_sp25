@@ -12,6 +12,10 @@ public class MCU {
     for (int i = 0; i < 10; i++) {
       thanos.useGauntlet();
     }
+
+    thanos.removeStone(powerStone);
+    thanos.removeStone(spaceStone);
+
   }
 
 }

@@ -9,6 +9,11 @@ public interface IStone {
 
   void activate();
 
+  /**
+   * Should undo the actions of activate.
+   */
+  void deactivate();
+
   String toString();
 
 

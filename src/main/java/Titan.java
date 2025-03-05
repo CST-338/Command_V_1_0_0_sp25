@@ -43,6 +43,7 @@ public class Titan extends Person{
       System.out.printf("%s does not have %s%n",this, stone);
       return false;
     }
+    stone.deactivate();
     gauntlet.remove(stone);
     System.out.printf("%s no longer has %s%n",this, stone);
     return true;

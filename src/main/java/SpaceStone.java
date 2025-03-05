@@ -48,6 +48,24 @@
 
   }
 
+  @Override
+  public void deactivate() {
+    if(oldLocation == null){
+      System.out.println("No location to go to.");
+      return;
+    }
+
+    if(owner.getLocation().equals(oldLocation)){
+      System.out.printf("%s is already at %s%n",owner.getName(), oldLocation);
+      return;
+    }
+
+    owner.setLocation(oldLocation);
+
+    System.out.printf("%s is now at %s%n",owner.getName(),oldLocation);
+
+  }
+
   public String getOldLocation() {
     return oldLocation;
   }
