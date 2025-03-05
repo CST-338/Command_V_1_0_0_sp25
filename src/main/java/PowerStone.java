@@ -3,6 +3,9 @@
  * <br>
  * PowerStone uses a field, powerModifer, to increase the
  * power attribute of a Person, owner.
+ *
+ * Create one or more derived classes that encapsulates some subset of the following: __the method to invoke__, the arguments to pass.
+ *
  * created: 3/3/25
  * @since 0.1.0
  */
@@ -11,6 +14,10 @@ public class PowerStone implements IStone{
   private Person owner;
   //This is used to allow undo operations.
   private int activationCount = 0;
+
+  public PowerStone(Person owner) {
+    this.owner = owner;
+  }
 
   @Override
   public void activate() {
