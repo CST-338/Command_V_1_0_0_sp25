@@ -41,7 +41,8 @@ public class Titan extends Person{
       System.out.printf("%s does not have the %s%n",getName(),stone);
       return false;
     }
-
+    stone.deactivate();
+//    gauntlet.get(gauntlet.indexOf(stone)).deactivate();
     gauntlet.remove(stone);
     System.out.printf("%s no longer has the %s%n",getName(),stone);
     return true;

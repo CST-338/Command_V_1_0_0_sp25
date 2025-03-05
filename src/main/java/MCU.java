@@ -15,6 +15,9 @@ public class MCU {
       thanos.useGauntlet();
     }
 
+    thanos.removeStone(spaceStone);
+    thanos.removeStone(powerStone);
+
   }
 
 }

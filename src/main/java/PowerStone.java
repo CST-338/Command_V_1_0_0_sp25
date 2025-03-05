@@ -49,4 +49,16 @@ public class PowerStone implements IStone{
     owner.setPower(currentPower);
     System.out.printf("%s's new power is %s%n",owner, owner.getPower());
   }
+
+  @Override
+  public void deactivate() {
+    System.out.printf("%s is powering down current power: %s%n",owner, owner.getPower());
+    double currentPower = owner.getPower();
+    while(powerUpCount > 0){
+      currentPower = currentPower / powerMultiplier;
+      powerUpCount--;
+    }
+    owner.setPower(currentPower);
+    System.out.printf("%s's new power is %s%n",owner, owner.getPower());
+  }
 }

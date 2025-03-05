@@ -52,4 +52,18 @@ public class SpaceStone implements IStone{
     System.out.printf("%s is moving from %s to %s%n",owner.getName(), oldLocation, newLocation);
     owner.setLocation(newLocation);
   }
+
+  @Override
+  public void deactivate() {
+    if(oldLocation == null){
+      System.out.println("No location to move to.");
+      return;
+    }
+    if(owner.getLocation().equals(oldLocation)){
+      System.out.printf("%s is already at %s%n",owner.getName(),oldLocation);
+      return;
+    }
+    System.out.printf("%s is moving from %s to %s%n",owner.getName(), owner.getLocation(), oldLocation);
+    owner.setLocation(oldLocation);
+  }
 }
