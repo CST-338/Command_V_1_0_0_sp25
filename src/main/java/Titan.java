@@ -26,7 +26,7 @@ public class Titan extends Person{
 
   @Override
   public boolean addStone(IStone stone) {
-    //TODO:only one person can own this at a time...
+
     if(gauntlet.contains(stone)){
       System.out.printf("%s already has %s%n",this, stone);
       return false;
